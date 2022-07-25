@@ -1,0 +1,18 @@
+spring:
+  flyway:
+    enabled: false
+  jpa:
+    hibernate:
+      ddl-auto: none
+  batch:
+    job:
+      names: ${JOB_NAME:NONE}
+  datasource:
+    first:
+      hikari:
+        jdbc-url: jdbc:mysql://localhost:33306/firstdb
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: password
+        minimum-idle: 5
+        maximum-pool-size: 5
